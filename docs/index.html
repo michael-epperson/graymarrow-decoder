@@ -152,6 +152,13 @@
                                        i++
                                     }
                                 }
+                                if (removeValue == "north_star") {
+                                    removeValue = "north star (north)"
+                                } else if (removeValue == "rising_sun") {
+                                    removeValue = "rising sun (east)"
+                                } else if (removeValue == "setting_sun") {
+                                    removeValue = "setting sun (west)"
+                                }
                                 lengthToRemove = -1 * (removeValue.length + 1)
                                 $('#text').text($('#text').html().slice(0,lengthToRemove))
                             }
