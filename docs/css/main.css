@@ -4,10 +4,15 @@
 
 .grid-container {
     display: grid;
-    grid-gap: 10px;
+    justify-content: center;
+    width: 500px;
+    padding: 5px;
+    margin: auto;
+    gap: 5px;
 }
 
 .item1 {
+    width: 480px;
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 1;
@@ -16,6 +21,7 @@
 }
 
 .item2 {
+    width: 480px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -24,37 +30,42 @@
 }
 
 .item3 {
+    width: 240px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 3;
-    text-align: center;
+    text-align: right;
 }
 .item4 {
+    width: 240px;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3;
-    text-align: center;
+    text-align: left;
 }
 
 .item5 {
+    width: 240px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 4;
-    text-align: center;
+    text-align: right;
 }
 
 .item6 {
+    width: 240px;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 4;
     grid-row-end: 4;
-    text-align: center;
+    text-align: left;
 }
 
 .item7 {
+    width: 480px;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 5;
