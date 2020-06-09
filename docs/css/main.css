@@ -1,18 +1,45 @@
 #text {
-    text-align: center;
+    min-height: 75px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+input[type=image]{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+input[type=image]:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 .grid-container {
     display: grid;
     justify-content: center;
-    width: 500px;
+    width: 520px;
     padding: 5px;
     margin: auto;
     gap: 5px;
 }
 
 .item1 {
-    width: 480px;
+    width: 520px;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+}
+
+.item2 {
+    width: 520px;
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 1;
@@ -20,55 +47,46 @@
     text-align: center;
 }
 
-.item2 {
-    width: 480px;
+.item3 {
+    width: 260px;
+    grid-column-start: 1;
+    grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
-    grid-column-start: 1;
+    text-align: center;
+}
+.item4 {
+    width: 260px;
+    grid-column-start: 3;
     grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
     text-align: center;
 }
 
-.item3 {
-    width: 240px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    text-align: right;
-}
-.item4 {
-    width: 240px;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    text-align: left;
-}
-
 .item5 {
-    width: 240px;
+    width: 260px;
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    text-align: right;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    text-align: center;
 }
 
 .item6 {
-    width: 240px;
+    width: 260px;
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    text-align: left;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    text-align: center;
 }
 
 .item7 {
-    width: 480px;
+    width: 520px;
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 4;
     text-align: center;
 }
