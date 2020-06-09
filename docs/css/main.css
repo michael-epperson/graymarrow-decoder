@@ -1,5 +1,15 @@
 .page div {
     text-align: center;
+    margin: auto;
+    width: 100%;
     display: block;
-    line-height: normal;
+    padding: 10px;
+}
+
+.page {
+    float: left;
+}
+
+.buttons {
+    float: center;
 }

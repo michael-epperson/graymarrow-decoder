@@ -8,7 +8,7 @@
         <div id="selected_images" class="active_page"></div>
         <div id="text">
         </div>
-        <span id="page1" class="page">
+        <div id="page1" class="page">
             <div>
                 <input type="image" id="flame" alt="" src="./images/flame.png">
                 <input type="image" id="bone" alt="" src="./images/bone.png">
@@ -25,9 +25,9 @@
                 <input type="image" id="skeleton" alt="" src="./images/skeleton.png">
                 <input type="image" id="skull" alt="" src="./images/skull.png">
             </div>
-        </span>
+        </div>
         
-        <span id="page2" class="page">
+        <div id="page2" class="page">
             <div>
                 <input type="image" id="to" alt="" src="./images/to.png">
                 <input type="image" id="from" alt="" src="./images/from.png">
@@ -44,9 +44,9 @@
                 <input type="image" id="ship" alt="" src="./images/ship.png">
                 <input type="image" id="camp" alt="" src="./images/camp.png">
             </div>
-        </span>
+        </div>
         
-        <span id="page3" class="page">
+        <div id="page3" class="page">
             <div>
             <input type="image" id="dig" alt="" src="./images/dig.png">
             <input type="image" id="chest" alt="" src="./images/chest.png">
@@ -63,9 +63,9 @@
             <input type="image" id="shark" alt="" src="./images/shark.png">
             <input type="image" id="walk" alt="" src="./images/walk.png">
             </div>
-        </span>
+        </div>
 
-        <span id="page4" class="page">
+        <div id="page4" class="page">
             <div>
             <input type="image" id="tree" alt="" src="./images/tree.png">
             <input type="image" id="cage" alt="" src="./images/cage.png">
@@ -83,12 +83,12 @@
             <input type="image" id="five" alt="" src="./images/five.png">
             <input type="image" id="seven" alt="" src="./images/seven.png">
             </div>
-        </span>
+        </div>
 
-        <span>
+        <div class="buttons">
             <input type="button" id="back" value="back">
             <input type="button" id="clear" value="clear">
-        </span>
+        </div>
 
         <script>
             var lastClicked = []
@@ -119,17 +119,28 @@
                                 }
                                 if (Number.isInteger(lastClicked[lastClicked.length - 2])){
                                     walkValue -= removeValue
+                                    $('#text').append(" " + walkValue)
                                 } else {
                                     walkValue = 0
                                 }
-                                if (walkValue > 0){
-                                    $('#text').append(" " + walkValue)
-                                }
                             } else {
+                                // we need to see if next item on the list is a number, if so, then we need to fix walkValue
+                                if (Number.isInteger(lastClicked[lastClicked.length - 2])){
+                                    var i = 2;
+                                    walkValue = 0;
+                                    while (lastClicked.length - i > 0) {
+                                       if (Number.isInteger(lastClicked[lastClicked.length - i])){
+                                           walkValue += lastClicked[lastClicked.length - i]
+                                       } else {
+                                           break;
+                                       }
+                                       i++
+                                    }
+                                }
                                 lengthToRemove = -1 * (removeValue.length + 1)
                                 $('#text').text($('#text').html().slice(0,lengthToRemove))
                             }
-                            lastClicked.pop()
+                            var popped = lastClicked.pop()
                             $('#selected_images> img:last-child').remove()
                         } else {
                             // just clear
