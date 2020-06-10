@@ -97,3 +97,10 @@ input[type=image]:hover {
     grid-row-end: 4;
     text-align: center;
 }
+
+input[type=button]{
+    border-radius: 8px;
+    height: 46px;
+    width: 46px;
+    background-color: #ddd;
+}
