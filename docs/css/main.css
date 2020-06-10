@@ -11,6 +11,10 @@ img {
     margin-right: 2px;
 }
 
+body {
+    background-image: url(../images/background-cement-concrete-paint-242236.jpg);
+}
+
 input[type=image]{
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -24,9 +28,11 @@ input[type=image]:hover {
     display: grid;
     justify-content: center;
     width: 520px;
+    height:100%;
     padding: 5px;
     margin: auto;
     gap: 5px;
+    background-color: #ddd;
 }
 
 .item1 {
@@ -36,6 +42,7 @@ input[type=image]:hover {
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
+    min-height: 400px;
 }
 
 .item2 {
